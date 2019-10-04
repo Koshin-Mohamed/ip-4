@@ -16,41 +16,44 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="">First & Last name</span>
             </div>
-            <input type="text" class="form-control">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" required !important>
+            <input type="text" class="form-control" required>
           </div>
             <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="">Phone Number</span>
                 </div>
-                <input type="text" class="form-control">
+                <input type="tel" class="form-control" required>
               </div>
               <div class="input-group">
                   <div class="input-group-prepend">
                     <span class="input-group-text" id="">E-mail</span>
                   </div>
-                  <input type="email" class="form-control">
+                  <input type="email" class="form-control" required>
                 </div>
                 <br>
+                <br>
+                <h2>Build Your Pizza</h2>
                 <br>
         <div class="row">
           <div class="col-md-6">
             <h4>Pizza Size</h4>
-            <select class="custom-select">
+            <select class="custom-select" required>
               <option selected>Select Your Pizza Size</option>
-              <option value="Small">Small</option>
-              <option value="Medium">Medium</option>
-              <option value="Large">Large</option>
+              <option value= 500>Small - 500 Kshs</option>
+              <option value= 800>Medium - 800 Kshs</option>
+              <option value= 1000 >Large - 1000 Kshs</option>
             </select>
+            <br>
+            <br>
           </div>
           <div class="col-md-6">
-            <br>
             <h4>Pizza Crust</h4>
-            <select class="custom-select">
+            <select class="custom-select" required>
               <option selected>Select Your Pizza Crust</option>
-              <option value="Crispy">Crispy</option>
-              <option value="Stuffed">Stuffed</option>
-              <option value="Gluten-Free">Gluten-Free</option>
+              <option value= 0>Crispy - Free</option>
+              <option value= 0 >Gluten-Free - Free</option>
+              <option value= 100>Stuffed - 100 Kshs</option>
             </select>
           </div>
         </div>
@@ -64,9 +67,9 @@
                 class="custom-control-input"
                 id="beef"
                 name="beef"
-                value="Beef"
+                value= 100
               />
-              <label class="custom-control-label" for="beef">Beef <sup></sup> </label>
+              <label class="custom-control-label" for="beef">Beef <sup>+100 Kshs</sup> </label>
             </div>
             <div class="custom-control custom-checkbox">
               <input
@@ -74,46 +77,73 @@
                 class="custom-control-input"
                 id="chicken"
                 name="chicken"
-                value="Chicken"
+                value= 100
               />
-              <label class="custom-control-label" for="chicken">Chicken</label>
+              <label class="custom-control-label" for="chicken">Chicken <sup>+100 Kshs</sup> </label>
             </div>
             <div class="custom-control custom-checkbox">
               <input
                 type="checkbox"
                 class="custom-control-input"
-                id="extra-cheese"
-                name="extra-cheese"
-                value="Extra-Cheese"
+                id="cheese"
+                name="cheese"
+                value= 0
+                checked
               />
-              <label class="custom-control-label" for="extra-cheese"
-                >Extra Cheese</label
+              <label class="custom-control-label" for="cheese"
+                >Cheese <sup>Free</sup></label
               >
             </div>
             <div class="custom-control custom-checkbox">
               <input
                 type="checkbox"
                 class="custom-control-input"
-                id="pineapples"
-                name="pineapples"
-                value="Pineapples"
+                id="tomato-sauce"
+                name="tomato-sauce"
+                value= 0
+                checked
               />
-              <label class="custom-control-label" for="pineapples"
-                >Pineapples</label
+              <label class="custom-control-label" for="tomato-sauce"
+                >Tomato Sauce <sup>Free</sup></label
               >
             </div>
+            <div class="custom-control custom-checkbox">
+                <input
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="tomatoes"
+                  name="tomatoes"
+                  value= 50
+                />
+                <label class="custom-control-label" for="tomatoes"
+                  >Tomatoes <sup>Free</sup></label
+                >
+              </div>
           </div>
+          
           <div class="col-md-6">
+              <div class="custom-control custom-checkbox">
+                  <input
+                    type="checkbox"
+                    class="custom-control-input"
+                    id="pineapples"
+                    name="pineapples"
+                    value= 50
+                  />
+                  <label class="custom-control-label" for="pineapples"
+                    >Pineapples <sup>+50 Kshs</sup></label
+                  >
+                </div>
             <div class="custom-control custom-checkbox">
               <input
                 type="checkbox"
                 class="custom-control-input"
                 id="mushrooms"
                 name="mushrooms"
-                value="Mushrooms"
+                value= 50
               />
               <label class="custom-control-label" for="mushrooms"
-                >Mushrooms</label
+                >Mushrooms <sup>+50 Kshs</sup></label
               >
             </div>
             <div class="custom-control custom-checkbox">
@@ -122,9 +152,9 @@
                 class="custom-control-input"
                 id="olives"
                 name="olives"
-                value="Olives"
+                value= 50
               />
-              <label class="custom-control-label" for="olives">Olives</label>
+              <label class="custom-control-label" for="olives">Olives <sup>+50 Kshs</sup></label>
 
             </div>
             <div class="custom-control custom-checkbox">
@@ -133,9 +163,9 @@
                 class="custom-control-input"
                 id="chilies"
                 name="chilies"
-                value="Chilies"
+                value= 50
               />
-              <label class="custom-control-label" for="chilies">Chilies</label>
+              <label class="custom-control-label" for="chilies">Chilies <sup>+50 Kshs</sup></label>
               <br />
             </div>
             <div class="custom-control custom-checkbox">
@@ -144,10 +174,10 @@
                 class="custom-control-input"
                 id="green-peppers"
                 name="green-peppers"
-                value="Green-Peppers"
+                value= 50
               />
               <label class="custom-control-label" for="green-peppers"
-                >Green Peppers</label
+                >Green Peppers <sup>+50 Kshs</sup></label
               >
             </div>
           </div>
@@ -160,7 +190,7 @@
           </div>
           <div class="custom-control custom-radio custom-control-inline">
             <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-            <label class="custom-control-label" for="customRadioInline2">Pick Up</label>
+            <label class="custom-control-label" for="customRadioInline2">Pick Up In Store</label>
           </div>
           <br>
           <br>
