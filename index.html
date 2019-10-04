@@ -33,7 +33,7 @@
                 </div>
                 <br>
                 <br>
-                <h2>Build Your Pizza</h2>
+                <h2 id="BYP">Build Your Pizza</h2>
                 <br>
         <div class="row">
           <div class="col-md-6">
@@ -61,6 +61,32 @@
         <h4>Toppings</h4>
         <div class="row">
           <div class="col-md-6">
+              <div class="custom-control custom-checkbox">
+                  <input
+                    type="checkbox"
+                    class="custom-control-input"
+                    id="cheese"
+                    name="cheese"
+                    value= 0
+                    checked
+                  />
+                  <label class="custom-control-label" for="cheese"
+                    >Cheese <sup>Free</sup></label
+                  >
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input
+                    type="checkbox"
+                    class="custom-control-input"
+                    id="tomato-sauce"
+                    name="tomato-sauce"
+                    value= 0
+                    checked
+                  />
+                  <label class="custom-control-label" for="tomato-sauce"
+                    >Tomato Sauce <sup>Free</sup></label
+                  >
+                </div>
             <div class="custom-control custom-checkbox">
               <input
                 type="checkbox"
@@ -80,32 +106,6 @@
                 value= 100
               />
               <label class="custom-control-label" for="chicken">Chicken <sup>+100 Kshs</sup> </label>
-            </div>
-            <div class="custom-control custom-checkbox">
-              <input
-                type="checkbox"
-                class="custom-control-input"
-                id="cheese"
-                name="cheese"
-                value= 0
-                checked
-              />
-              <label class="custom-control-label" for="cheese"
-                >Cheese <sup>Free</sup></label
-              >
-            </div>
-            <div class="custom-control custom-checkbox">
-              <input
-                type="checkbox"
-                class="custom-control-input"
-                id="tomato-sauce"
-                name="tomato-sauce"
-                value= 0
-                checked
-              />
-              <label class="custom-control-label" for="tomato-sauce"
-                >Tomato Sauce <sup>Free</sup></label
-              >
             </div>
             <div class="custom-control custom-checkbox">
                 <input
@@ -196,6 +196,27 @@
           <br>
           <button type="button" class="btn btn-danger btn-lg btn-block">Checkout</span></button>
       </form>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="card">
+          <div class="card-header">
+            Order Summary
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">SLICE OF LIFE PIZZA</h5>
+            <p class="card-text"><q>You can't buy happiness, but you can buy pizza, and that's almost the same thing!</q></p>
+            <a href="#BYP" class="btn btn-danger">Add Another Pizza</a>
+            <a href="#" class="btn btn-danger">Complete Order</a>
+          </div>
+        </div>
     </div>
   </body>
 </html>
