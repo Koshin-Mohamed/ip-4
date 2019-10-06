@@ -9,27 +9,27 @@
   </head>
   <body>
     <div class="container">
-      <form action="">
+      <form id="order" action="">
         <h1 class="jumbotron">Slice of Life Pizza</h1>
         <h4>Customer Information</h4>
         <div class="input-group">
             <div class="input-group-prepend">
               <span class="input-group-text" id="">First & Last name</span>
             </div>
-            <input type="text" class="form-control" required !important>
-            <input type="text" class="form-control" required>
+            <input type="text" class="form-control" id="first-name" required !important>
+            <input type="text" class="form-control" id="last-name" required>
           </div>
             <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="">Phone Number</span>
                 </div>
-                <input type="tel" class="form-control" required>
+                <input type="tel" class="form-control" id="phone-number" required>
               </div>
               <div class="input-group">
                   <div class="input-group-prepend">
                     <span class="input-group-text" id="">E-mail</span>
                   </div>
-                  <input type="email" class="form-control" required>
+                  <input type="email" class="form-control" id="email" required>
                 </div>
                 <br>
                 <h2 id="BYP">Build Your Pizza</h2>
@@ -193,7 +193,7 @@
           </div>
           <br>
           <br>
-          <button type="button" class="btn btn-danger btn-lg btn-block">Checkout</button>
+          <button type="submit" class="btn btn-danger btn-lg btn-block checkout">Checkout</button>
       </form>
       <br>
       <br>
@@ -212,10 +212,21 @@
           <div class="card-body">
             <h5 class="card-title">SLICE OF LIFE PIZZA</h5>
             <p class="card-text"><q><em>You can't buy happiness, but you can buy pizza, and that's almost the same thing.</em></q></p>
-            <a href="#BYP" class="btn btn-danger">Add Another Pizza</a>
-            <a href="#" class="btn btn-danger">Complete Order</a>
+            
+            <h4 id="customer" >Customer:</h4>
+          <div class="row">
+          <div class="col-md-6">
+            <div id="show-customer">
+              <p>First Name: <span class="first-name"></span></p>
+              <p>Last Name: <span class="last-name"></span></p>
+              <p>Phone Number: <span class="phone-number"></span></p>
+              <p>Email: <span class="email"></span></p>
           </div>
         </div>
+      </div>
+        <a href="#BYP" class="btn btn-danger">Add Another Pizza</a>
+            <a href="#" class="btn btn-danger">Complete Order</a>
+    </div>
     </div>
   </body>
 </html>
