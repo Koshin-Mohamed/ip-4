@@ -7,17 +7,12 @@ function CustomerInfo(first, last, number, email) {
   this.email = email;
 }
 
-CustomerInfo.prototype.fullInfo = function() {
-  return (
-    this.firstName +
-    " " +
-    this.lastName +
-    " " +
-    this.phoneNumber +
-    " " +
-    this.email
-  );
-};
+function AddressInfo(first, last, number, email) {
+  this.firstName = first;
+  this.lastName = last;
+  this.phoneNumber = number;
+  this.email = email;
+}
 
 // user interface logic
 
@@ -43,11 +38,11 @@ $(document).ready(function() {
     $(".phone-number").text(newCustomer.phoneNumber);
     $(".email").text(newCustomer.email);
 
-    $("input#first-name").val("");
-    $("input#last-name").val("");
-    $("input#phone-number").val("");
-    $("input#email").val("");
-
-    location.href="#customer"
+    location.href = "#customer";
   });
+  $("#customRadioInline1").on("click", function(){
+    if($(this).is(":checked")){
+    prompt("Please enter your address (Number, Street, City)");
+  }
+})
 });
