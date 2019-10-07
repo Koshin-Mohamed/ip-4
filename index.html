@@ -241,6 +241,17 @@
               />
             </div>
             <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="">County</span>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="county"
+                  required
+                />
+              </div>
+            <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="">City</span>
               </div>
@@ -278,17 +289,28 @@
               ></q
             >
           </p>
-          <h4 id="customer">Customer:</h4>
-          <div class="col-md-6">
-            <div id="show-customer">
-              <p>First Name: <span class="first-name"></span></p>
-              <p>Last Name: <span class="last-name"></span></p>
-              <p>Phone Number: <span class="phone-number"></span></p>
-              <p>Email: <span class="email"></span></p>
+          <div class="row">
+            <div class="col-md-6">
+              <div id="show-customer">
+                <h4 id="customer">Customer</h4>
+                <p>First Name: <span class="first-name"></span></p>
+                <p>Last Name: <span class="last-name"></span></p>
+                <p>Phone Number: <span class="phone-number"></span></p>
+                <p>Email: <span class="email"></span></p>
+              </div>
             </div>
+            <div class="col-md-6">
+              <div id="show-address">
+                <h4>Address</h4>
+                <p>House Number: <span class="house-number"></span></p>
+                <p>Street Name: <span class="street-name"></span></p>
+                <p>County: <span class="county"></span></p>
+                <p>City: <span class="city"></span></p>
+              </div>
+            </div>
+            <a href="#BYP" class="btn btn-danger">Add Another Pizza</a>
+            <a href="#" class="btn btn-danger">Complete Order</a>
           </div>
-          <a href="#BYP" class="btn btn-danger">Add Another Pizza</a>
-          <a href="#" class="btn btn-danger">Complete Order</a>
         </div>
       </div>
     </div>

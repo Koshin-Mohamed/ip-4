@@ -7,9 +7,10 @@ function CustomerInfo(first, last, phone, email) {
   this.email = email;
 }
 
-function Address(number, street, city) {
+function Address(number, street, county, city) {
   this.houseNumber = number;
   this.streetName = street;
+  this.county = county;
   this.city = city;
 }
 
@@ -38,7 +39,26 @@ $(document).ready(function() {
     $(".email").text(newCustomer.email);
 
     location.href = "#customer";
+
+    var inputtedHouseNumber = $("input#house-number").val();
+    var inputtedStreetName = $("input#street-name").val();
+    var inputtedCounty = $("input#county").val();
+    var inputtedCity = $("input#city").val();
+
+    var newAddress = new Address(
+      inputtedHouseNumber,
+      inputtedStreetName,
+      inputtedCounty,
+      inputtedCity
+    );
+
+    $("#show-address").show();
+    $(".house-number").text(newAddress.houseNumber);
+    $(".street-name").text(newAddress.streetName);
+    $(".county").text(newAddress.county);
+    $(".city").text(newAddress.city);
   });
+
   $("#customRadioInline1").on("click", function() {
     if ($(this).is(":checked")) {
       alert(
