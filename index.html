@@ -30,7 +30,7 @@
             <select class="custom-select" required>
               <option selected>Select Your Pizza Crust</option>
               <option value="0">Crispy - Free</option>
-              <option value="0">Gluten-Free - Free</option>
+              <option value="50">Gluten-Free - 50 Kshs</option>
               <option value="100">Stuffed - 100 Kshs</option>
             </select>
           </div>
@@ -98,7 +98,7 @@
                 value="50"
               />
               <label class="custom-control-label" for="tomatoes"
-                >Tomatoes <sup>Free</sup></label
+                >Tomatoes <sup>+50 Kshs</sup></label
               >
             </div>
           </div>
@@ -212,11 +212,9 @@
             class="custom-control-input"
           />
           <label class="custom-control-label" for="customRadioInline2"
-            >Pick Up In Store</label
+            >Pick Up In Store<sup>Free</sup></label
           >
         </div>
-        <br />
-        <br />
         <div id="address">
           <h4>Address</h4>
           <div class="input-group">
@@ -241,16 +239,11 @@
               />
             </div>
             <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="">County</span>
-                </div>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="county"
-                  required
-                />
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="">County</span>
               </div>
+              <input type="text" class="form-control" id="county" required />
+            </div>
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="">City</span>
@@ -265,11 +258,6 @@
           Checkout
         </button>
       </form>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <br />
       <br />
       <br />
@@ -292,24 +280,34 @@
           <div class="row">
             <div class="col-md-6">
               <div id="show-customer">
-                <h4 id="customer">Customer</h4>
-                <p>First Name: <span class="first-name"></span></p>
-                <p>Last Name: <span class="last-name"></span></p>
-                <p>Phone Number: <span class="phone-number"></span></p>
-                <p>Email: <span class="email"></span></p>
+                <h4 id="customer">Customer Details</h4>
+                <p><strong>First Name:</strong><span class="first-name"></span></p>
+                <p><strong>Last Name:</strong> <span class="last-name"></span></p>
+                <p><strong>Phone Number:</strong> <span class="phone-number"></span></p>
+                <p><strong>Email:</strong> <span class="email"></span></p>
               </div>
             </div>
             <div class="col-md-6">
               <div id="show-address">
-                <h4>Address</h4>
-                <p>House Number: <span class="house-number"></span></p>
-                <p>Street Name: <span class="street-name"></span></p>
-                <p>County: <span class="county"></span></p>
-                <p>City: <span class="city"></span></p>
+                <h4>Address Info</h4>
+                <p><strong>House Number:</strong> <span class="house-number"></span></p>
+                <p><strong>Street Name:</strong> <span class="street-name"></span></p>
+                <p><strong>County:</strong> <span class="county"></span></p>
+                <p><strong>City:</strong> <span class="city"></span></p>
               </div>
             </div>
-            <a href="#BYP" class="btn btn-danger">Add Another Pizza</a>
-            <a href="#" class="btn btn-danger">Complete Order</a>
+            <div class="col-md-12">
+              <div id="show-total">
+                <h4>You Ordered</h4>
+                <span class="house-number"></span>
+                <span class="street-name"></span>
+                <span class="county"></span>
+              </div>
+            </div>
+            <div>
+              <a href="#BYP" class="btn btn-danger">Add Another Pizza</a>
+              <a href="#" class="btn btn-danger">Complete Order</a>
+            </div>
           </div>
         </div>
       </div>
