@@ -18,9 +18,9 @@
             <h4>Pizza Size</h4>
             <select class="custom-select" required>
               <option selected>Select Your Pizza Size</option>
-              <option value="500">Small - 500 Kshs</option>
-              <option value="800">Medium - 800 Kshs</option>
-              <option value="1000">Large - 1000 Kshs</option>
+              <option id="small" data-price ="500">Small - 500 Kshs</option>
+              <option id="medium" data-price ="800">Medium - 800 Kshs</option>
+              <option id="large" data-price ="1000">Large - 1000 Kshs</option>
             </select>
             <br />
             <br />
@@ -29,9 +29,9 @@
             <h4>Pizza Crust</h4>
             <select class="custom-select" required>
               <option selected>Select Your Pizza Crust</option>
-              <option value="0">Crispy - Free</option>
-              <option value="50">Gluten-Free - 50 Kshs</option>
-              <option value="100">Stuffed - 100 Kshs</option>
+              <option id="crispy" data-price ="0">Crispy - Free</option>
+              <option id="gluten" data-price ="50">Gluten-Free - 50 Kshs</option>
+              <option id="stuffed" data-price ="100">Stuffed - 100 Kshs</option>
             </select>
           </div>
         </div>
@@ -45,7 +45,7 @@
                 class="custom-control-input"
                 id="cheese"
                 name="cheese"
-                value="0"
+                data-price ="0"
                 checked
               />
               <label class="custom-control-label" for="cheese"
@@ -58,7 +58,7 @@
                 class="custom-control-input"
                 id="tomato-sauce"
                 name="tomato-sauce"
-                value="0"
+                data-price ="0"
                 checked
               />
               <label class="custom-control-label" for="tomato-sauce"
@@ -71,7 +71,7 @@
                 class="custom-control-input"
                 id="beef"
                 name="beef"
-                value="100"
+                data-price ="100"
               />
               <label class="custom-control-label" for="beef"
                 >Beef <sup>+100 Kshs</sup>
@@ -83,7 +83,7 @@
                 class="custom-control-input"
                 id="chicken"
                 name="chicken"
-                value="100"
+                data-price ="100"
               />
               <label class="custom-control-label" for="chicken"
                 >Chicken <sup>+100 Kshs</sup>
@@ -95,7 +95,7 @@
                 class="custom-control-input"
                 id="tomatoes"
                 name="tomatoes"
-                value="50"
+                data-price ="50"
               />
               <label class="custom-control-label" for="tomatoes"
                 >Tomatoes <sup>+50 Kshs</sup></label
@@ -110,7 +110,7 @@
                 class="custom-control-input"
                 id="pineapples"
                 name="pineapples"
-                value="50"
+                data-price ="50"
               />
               <label class="custom-control-label" for="pineapples"
                 >Pineapples <sup>+50 Kshs</sup></label
@@ -122,7 +122,7 @@
                 class="custom-control-input"
                 id="mushrooms"
                 name="mushrooms"
-                value="50"
+                data-price ="50"
               />
               <label class="custom-control-label" for="mushrooms"
                 >Mushrooms <sup>+50 Kshs</sup></label
@@ -134,7 +134,7 @@
                 class="custom-control-input"
                 id="olives"
                 name="olives"
-                value="50"
+                data-price ="50"
               />
               <label class="custom-control-label" for="olives"
                 >Olives <sup>+50 Kshs</sup></label
@@ -146,7 +146,7 @@
                 class="custom-control-input"
                 id="chilies"
                 name="chilies"
-                value="50"
+                data-price ="50"
               />
               <label class="custom-control-label" for="chilies"
                 >Chilies <sup>+50 Kshs</sup></label
@@ -159,7 +159,7 @@
                 class="custom-control-input"
                 id="green-peppers"
                 name="green-peppers"
-                value="50"
+                data-price ="50"
               />
               <label class="custom-control-label" for="green-peppers"
                 >Green Peppers <sup>+50 Kshs</sup></label
@@ -198,7 +198,7 @@
             id="customRadioInline1"
             name="customRadioInline1"
             class="custom-control-input"
-            value="150"
+            data-price ="150"
           />
           <label class="custom-control-label" for="customRadioInline1"
             >Delivery<sup>+150 Kshs</sup></label
@@ -210,12 +210,14 @@
             id="customRadioInline2"
             name="customRadioInline1"
             class="custom-control-input"
+            data-price="0"
           />
           <label class="custom-control-label" for="customRadioInline2"
             >Pick Up In Store<sup>Free</sup></label
           >
         </div>
         <div id="address">
+          <br />
           <h4>Address</h4>
           <div class="input-group">
             <div class="input-group-prepend">
@@ -281,27 +283,38 @@
             <div class="col-md-6">
               <div id="show-customer">
                 <h4 id="customer">Customer Details</h4>
-                <p><strong>First Name:</strong><span class="first-name"></span></p>
-                <p><strong>Last Name:</strong> <span class="last-name"></span></p>
-                <p><strong>Phone Number:</strong> <span class="phone-number"></span></p>
+                <p>
+                  <strong>First Name:</strong> <span class="first-name"></span>
+                </p>
+                <p>
+                  <strong>Last Name:</strong> <span class="last-name"></span>
+                </p>
+                <p>
+                  <strong>Phone Number:</strong>
+                  <span class="phone-number"></span>
+                </p>
                 <p><strong>Email:</strong> <span class="email"></span></p>
               </div>
             </div>
             <div class="col-md-6">
               <div id="show-address">
                 <h4>Address Info</h4>
-                <p><strong>House Number:</strong> <span class="house-number"></span></p>
-                <p><strong>Street Name:</strong> <span class="street-name"></span></p>
+                <p>
+                  <strong>House Number:</strong>
+                  <span class="house-number"></span>
+                </p>
+                <p>
+                  <strong>Street Name:</strong>
+                  <span class="street-name"></span>
+                </p>
                 <p><strong>County:</strong> <span class="county"></span></p>
                 <p><strong>City:</strong> <span class="city"></span></p>
               </div>
             </div>
             <div class="col-md-12">
               <div id="show-total">
-                <h4>You Ordered</h4>
-                <span class="house-number"></span>
-                <span class="street-name"></span>
-                <span class="county"></span>
+                <h4>Your Order Total</h4>
+                <p><strong>Total:</strong> <span class="total"> Kshs</span></p>
               </div>
             </div>
             <div>

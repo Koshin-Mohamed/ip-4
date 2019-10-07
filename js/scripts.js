@@ -57,6 +57,35 @@ $(document).ready(function() {
     $(".street-name").text(newAddress.streetName);
     $(".county").text(newAddress.county);
     $(".city").text(newAddress.city);
+
+    $('#order').on('change', function(){
+      update_total();
+    });
+    function update_total(){
+      var tot = 0;
+      var price = 0;
+      $('#order input[type=radio]:checked').each(function(){
+        price = $(this).data('price');
+        if(price > 0){
+          tot += price;
+        }
+      });
+      $('#order select').each(function(){
+        price = $("option:selected", this).data('price');
+        if(price > 0){
+          tot += price;
+        }
+      });
+      $('#order input[type=checkbox]:checked').each(function(){
+        price = $(this).data('price');
+        if(price > 0){
+          tot += price;
+        }
+      });
+      $('.total').html(tot);
+      $("#show-total").show();
+    }
+    update_total();
   });
 
   $("#customRadioInline1").on("click", function() {
@@ -67,6 +96,4 @@ $(document).ready(function() {
     }
     $("#address").show();
   });
-
-
 });
