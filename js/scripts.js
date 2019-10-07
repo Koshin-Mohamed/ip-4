@@ -1,15 +1,15 @@
 // business logic
 
-function CustomerInfo(first, last, number, email) {
+function CustomerInfo(first, last, phone, email) {
   this.firstName = first;
   this.lastName = last;
-  this.phoneNumber = number;
+  this.phoneNumber = phone;
   this.email = email;
 }
 
-function AddressInfo(number, street, city) {
-  this.number = number;
-  this.street = street;
+function Address(number, street, city) {
+  this.houseNumber = number;
+  this.streetName = street;
   this.city = city;
 }
 
@@ -41,16 +41,10 @@ $(document).ready(function() {
   });
   $("#customRadioInline1").on("click", function() {
     if ($(this).is(":checked")) {
-      prompt("Please enter your address number");
-      prompt("Please enter your street");
-      prompt("Please enter your city");
+      alert(
+        "Delivery charges will be 150 kshs. Please enter your location details below"
+      );
     }
-
-    var inputtedAddress = $("customRadioInline1").val();
-    
-    var newCustomer = new CustomerAddress(
-      inputtedAddress,
-    );
-
+    $("#address").show();
   });
 });
