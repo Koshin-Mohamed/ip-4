@@ -1,6 +1,6 @@
 body {
   background-image: url(/images/Pizza\ background.jpg);
-  background-size: auto;
+  background-size: contain;
 }
 #show-customer, #show-address, #show-total, #address{
   display: none;
@@ -9,8 +9,6 @@ form{
   padding: 0 40px;
   margin: 0 15 0 15;
 }
-h4{}
-.card{}
 .navbar-brand {
   font-size: 35px;
   font-weight: bolder;
@@ -24,4 +22,27 @@ h4{}
 }
 a {
   color: black;
+}
+#BYP{
+  margin-top: 50px;
+}
+#chicken-olive{
+  height: 740px;
+}
+.social {
+  display: block;
+  padding: 0 20px;
+  width: 30%;
+  height: 30%;
+  margin: 20px auto;
+}
+.icons {
+  text-align: center;
+  margin: auto;
+}
+.card{
+margin-bottom: 30px;
+}
+#footer{
+  margin-bottom: 0;
 }
