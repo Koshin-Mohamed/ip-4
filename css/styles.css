@@ -8,6 +8,7 @@ body {
 form{
   padding: 0 40px;
   margin: 0 15 0 15;
+  background-color: rgba(0, 0, 0, 0.3)
 }
 .navbar-brand {
   font-size: 35px;
@@ -45,4 +46,13 @@ margin-bottom: 30px;
 }
 #footer{
   margin-bottom: 0;
+}
+h2, h4{
+  color: white;
+}
+h2{
+  text-align: center;
+}
+label{
+  color: white;
 }
