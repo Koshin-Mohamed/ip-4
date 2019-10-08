@@ -8,9 +8,18 @@
     <title>Slice of Life Pizza</title>
   </head>
   <body>
+      <nav class="navbar sticky-top">
+          <span class="navbar-brand mb-0 h1"
+            > Slice of Life Pizza <img src="/images/iconmonstr-fast-food-10-96.png" alt=""
+          /></span>
+          <div class="menu">
+            <span><a href="">Build Your Pizza</a></span>
+            <span><a href="">Order Summary</a></span>
+            <span><a href="">Contact Us</a></span>
+          </div>
+        </nav>
     <div class="container">
-      <form id="order" action="">
-        <h1 class="jumbotron">Slice of Life Pizza</h1>
+      <form id="order">
         <h2 id="BYP">Build Your Pizza</h2>
         <br />
         <div class="row">
@@ -18,9 +27,9 @@
             <h4>Pizza Size</h4>
             <select class="custom-select" required>
               <option selected>Select Your Pizza Size</option>
-              <option id="small" data-price ="500">Small - 500 Kshs</option>
-              <option id="medium" data-price ="800">Medium - 800 Kshs</option>
-              <option id="large" data-price ="1000">Large - 1000 Kshs</option>
+              <option id="small" data-price="500">Small - 500 Kshs</option>
+              <option id="medium" data-price="800">Medium - 800 Kshs</option>
+              <option id="large" data-price="1000">Large - 1000 Kshs</option>
             </select>
             <br />
             <br />
@@ -29,9 +38,9 @@
             <h4>Pizza Crust</h4>
             <select class="custom-select" required>
               <option selected>Select Your Pizza Crust</option>
-              <option id="crispy" data-price ="0">Crispy - Free</option>
-              <option id="gluten" data-price ="50">Gluten-Free - 50 Kshs</option>
-              <option id="stuffed" data-price ="100">Stuffed - 100 Kshs</option>
+              <option id="crispy" data-price="0">Crispy - Free</option>
+              <option id="gluten" data-price="50">Gluten-Free - 50 Kshs</option>
+              <option id="stuffed" data-price="100">Stuffed - 100 Kshs</option>
             </select>
           </div>
         </div>
@@ -45,7 +54,7 @@
                 class="custom-control-input"
                 id="cheese"
                 name="cheese"
-                data-price ="0"
+                data-price="0"
                 checked
               />
               <label class="custom-control-label" for="cheese"
@@ -58,7 +67,7 @@
                 class="custom-control-input"
                 id="tomato-sauce"
                 name="tomato-sauce"
-                data-price ="0"
+                data-price="0"
                 checked
               />
               <label class="custom-control-label" for="tomato-sauce"
@@ -71,7 +80,7 @@
                 class="custom-control-input"
                 id="beef"
                 name="beef"
-                data-price ="100"
+                data-price="100"
               />
               <label class="custom-control-label" for="beef"
                 >Beef <sup>+100 Kshs</sup>
@@ -83,7 +92,7 @@
                 class="custom-control-input"
                 id="chicken"
                 name="chicken"
-                data-price ="100"
+                data-price="100"
               />
               <label class="custom-control-label" for="chicken"
                 >Chicken <sup>+100 Kshs</sup>
@@ -95,7 +104,7 @@
                 class="custom-control-input"
                 id="tomatoes"
                 name="tomatoes"
-                data-price ="50"
+                data-price="50"
               />
               <label class="custom-control-label" for="tomatoes"
                 >Tomatoes <sup>+50 Kshs</sup></label
@@ -110,7 +119,7 @@
                 class="custom-control-input"
                 id="pineapples"
                 name="pineapples"
-                data-price ="50"
+                data-price="50"
               />
               <label class="custom-control-label" for="pineapples"
                 >Pineapples <sup>+50 Kshs</sup></label
@@ -122,7 +131,7 @@
                 class="custom-control-input"
                 id="mushrooms"
                 name="mushrooms"
-                data-price ="50"
+                data-price="50"
               />
               <label class="custom-control-label" for="mushrooms"
                 >Mushrooms <sup>+50 Kshs</sup></label
@@ -134,7 +143,7 @@
                 class="custom-control-input"
                 id="olives"
                 name="olives"
-                data-price ="50"
+                data-price="50"
               />
               <label class="custom-control-label" for="olives"
                 >Olives <sup>+50 Kshs</sup></label
@@ -146,7 +155,7 @@
                 class="custom-control-input"
                 id="chilies"
                 name="chilies"
-                data-price ="50"
+                data-price="50"
               />
               <label class="custom-control-label" for="chilies"
                 >Chilies <sup>+50 Kshs</sup></label
@@ -159,7 +168,7 @@
                 class="custom-control-input"
                 id="green-peppers"
                 name="green-peppers"
-                data-price ="50"
+                data-price="50"
               />
               <label class="custom-control-label" for="green-peppers"
                 >Green Peppers <sup>+50 Kshs</sup></label
@@ -198,7 +207,7 @@
             id="customRadioInline1"
             name="customRadioInline1"
             class="custom-control-input"
-            data-price ="150"
+            data-price="150"
           />
           <label class="custom-control-label" for="customRadioInline1"
             >Delivery<sup>+150 Kshs</sup></label
@@ -284,6 +293,7 @@
               <div id="show-customer">
                 <h4 id="customer">Customer Details</h4>
                 <p>
+                  <br />
                   <strong>First Name:</strong> <span class="first-name"></span>
                 </p>
                 <p>
@@ -300,6 +310,7 @@
               <div id="show-address">
                 <h4>Address Info</h4>
                 <p>
+                  <br />
                   <strong>House Number:</strong>
                   <span class="house-number"></span>
                 </p>
@@ -313,17 +324,35 @@
             </div>
             <div class="col-md-12">
               <div id="show-total">
+                <br />
                 <h4>Your Order Total</h4>
+                <br />
                 <p><strong>Total:</strong> <span class="total"> Kshs</span></p>
               </div>
             </div>
             <div>
-              <a href="#BYP" class="btn btn-danger">Add Another Pizza</a>
-              <a href="#" class="btn btn-danger">Complete Order</a>
+              <button id="complete" class="btn btn-danger">
+                Complete Order
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

@@ -1,3 +1,27 @@
+body {
+  background-image: url(/images/Pizza\ background.jpg);
+  background-size: auto;
+}
 #show-customer, #show-address, #show-total, #address{
   display: none;
+}
+form{
+  padding: 0 40px;
+  margin: 0 15 0 15;
+}
+h4{}
+.card{}
+.navbar-brand {
+  font-size: 35px;
+  font-weight: bolder;
+}
+.navbar{
+  background-color: red;
+  margin-bottom: 50px;
+}
+.menu a {
+  padding: 0 50px;
+}
+a {
+  color: black;
 }
