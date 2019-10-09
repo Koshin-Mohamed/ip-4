@@ -25,7 +25,7 @@ a {
   color: black;
 }
 #BYP{
-  margin-top: 50px;
+  margin-top: 120px;
 }
 #chicken-olive{
   height: 740px;
@@ -59,4 +59,10 @@ label{
 sup{
   color: red;
   font-weight: bolder;
+}
+h5, p, #order-summary{
+  text-align: center;
+}
+#complete{
+  text-align: center;
 }
