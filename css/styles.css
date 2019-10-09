@@ -1,5 +1,5 @@
 body {
-  background-image: url(/images/Pizza\ background.jpg);
+  background-image: url(images/Pizza\ background.jpg);
   background-size: contain;
 }
 #show-customer, #show-address, #show-total, #address{
